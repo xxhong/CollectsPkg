@@ -1,5 +1,7 @@
 package com.flyco.labelview;
 
+import com.collect.R;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
