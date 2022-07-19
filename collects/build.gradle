@@ -8,9 +8,7 @@ publishing {
         // MavenPublication必须有，这个是调用的任务类
         mavenJava(MavenPublication) {
             // 这里头是artifacts的配置信息，不填会采用默认的
-            groupId = 'com.xxhong'
-            artifactId = 'collections'
-            version = '0.2.0'
+            artifactId = 'CollectsPkg'
         }
     }
 }
