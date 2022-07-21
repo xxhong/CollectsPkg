@@ -329,17 +329,17 @@ public class TagGroup extends ViewGroup {
         }
     }
 
-    @Override
-    public Parcelable onSaveInstanceState() {
-        Parcelable superState = super.onSaveInstanceState();
-        SavedState ss = new SavedState(superState);
-        ss.tags = getTags();
-        ss.checkedPosition = getCheckedTagIndex();
-        if (getInputTag() != null) {
-            ss.input = getInputTag().getText().toString();
-        }
-        return ss;
-    }
+//    @Override
+//    public Parcelable onSaveInstanceState() {
+//        Parcelable superState = super.onSaveInstanceState();
+//        SavedState ss = new SavedState(superState);
+//        ss.tags = getTags();
+//        ss.checkedPosition = getCheckedTagIndex();
+//        if (getInputTag() != null) {
+//            ss.input = getInputTag().getText().toString();
+//        }
+//        return ss;
+//    }
 
     @Override
     public void onRestoreInstanceState(Parcelable state) {
