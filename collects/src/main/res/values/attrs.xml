@@ -96,4 +96,191 @@
         <attr name="realtimeDownsampleFactor" format="float"/>
         <attr name="realtimeOverlayColor" format="color"/>
     </declare-styleable>
+
+
+    <declare-styleable name="ShapeView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="corner_bottom_start" format="dimension" />
+        <attr name="corner_bottom_end" format="dimension" />
+        <attr name="corner_top_start" format="dimension" />
+        <attr name="corner_top_end" format="dimension" />
+        <attr name="solid_color" format="color" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="stroke_color" format="color" />
+        <attr name="gradient_start_color" format="color" />
+        <attr name="gradient_center_color" format="color" />
+        <attr name="gradient_end_color" format="color" />
+        <attr name="gradient_type" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+        <attr name="gradient_orientation" format="enum">
+            /** draw the gradient from the top to the bottom */
+            <enum name="top_bottom" value="0" />
+            /** draw the gradient from the top-right to the bottom-left */
+            <enum name="tr_bl" value="1" />
+            /** draw the gradient from the right to the left */
+            <enum name="right_left" value="2" />
+            /** draw the gradient from the bottom-right to the top-left */
+            <enum name="br_tl" value="3" />
+            /** draw the gradient from the bottom to the top */
+            <enum name="bottom_top" value="4" />
+            /** draw the gradient from the bottom-left to the top-right */
+            <enum name="bl_tr" value="5" />
+            /** draw the gradient from the left to the right */
+            <enum name="left_right" value="6" />
+            /** draw the gradient from the top-left to the bottom-right */
+            <enum name="tl_br" value="7" />
+        </attr>
+
+        <attr name="gradient_center_x" format="dimension" />
+        <attr name="gradient_center_y" format="dimension" />
+        <attr name="gradient_radius" format="dimension" />
+        <attr name="gradient_use_level" format="boolean" />
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeRelativeLayout">
+        <attr name="corner_radius" />
+        <attr name="corner_bottom_start" />
+        <attr name="corner_bottom_end" />
+        <attr name="corner_top_start" />
+        <attr name="corner_top_end" />
+        <attr name="solid_color" />
+        <attr name="stroke_width" />
+        <attr name="stroke_color" />
+        <attr name="gradient_start_color" />
+        <attr name="gradient_center_color" />
+        <attr name="gradient_end_color" />
+        <attr name="gradient_type" />
+        <attr name="gradient_orientation" />
+        <attr name="gradient_center_x" />
+        <attr name="gradient_center_y" />
+        <attr name="gradient_radius" />
+        <attr name="gradient_use_level" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapedFrameLayout">
+        <attr name="corner_radius" />
+        <attr name="corner_bottom_start" />
+        <attr name="corner_bottom_end" />
+        <attr name="corner_top_start" />
+        <attr name="corner_top_end" />
+        <attr name="solid_color" />
+        <attr name="stroke_width" />
+        <attr name="stroke_color" />
+        <attr name="gradient_start_color" />
+        <attr name="gradient_center_color" />
+        <attr name="gradient_end_color" />
+        <attr name="gradient_type" />
+        <attr name="gradient_orientation" />
+        <attr name="gradient_center_x" />
+        <attr name="gradient_center_y" />
+        <attr name="gradient_radius" />
+        <attr name="gradient_use_level" />
+    </declare-styleable>
+
+    <!-- 此处声明只是单纯能够在xml中提示属性，最终实际起作用为ShapeView -->
+    <declare-styleable name="ShapedConstraintLayout">
+        <attr name="corner_radius" />
+        <attr name="corner_bottom_start" />
+        <attr name="corner_bottom_end" />
+        <attr name="corner_top_start" />
+        <attr name="corner_top_end" />
+        <attr name="solid_color" />
+        <attr name="stroke_width" />
+        <attr name="stroke_color" />
+        <attr name="gradient_start_color" />
+        <attr name="gradient_center_color" />
+        <attr name="gradient_end_color" />
+        <attr name="gradient_type" />
+        <attr name="gradient_orientation" />
+        <attr name="gradient_center_x" />
+        <attr name="gradient_center_y" />
+        <attr name="gradient_radius" />
+        <attr name="gradient_use_level" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeLinearLayout">
+        <attr name="corner_radius" />
+        <attr name="corner_bottom_start" />
+        <attr name="corner_bottom_end" />
+        <attr name="corner_top_start" />
+        <attr name="corner_top_end" />
+        <attr name="solid_color" />
+        <attr name="stroke_width" />
+        <attr name="stroke_color" />
+        <attr name="gradient_start_color" />
+        <attr name="gradient_center_color" />
+        <attr name="gradient_end_color" />
+        <attr name="gradient_type" />
+        <attr name="gradient_orientation" />
+        <attr name="gradient_center_x" />
+        <attr name="gradient_center_y" />
+        <attr name="gradient_radius" />
+        <attr name="gradient_use_level" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeFlexLayout">
+        <attr name="corner_radius" />
+        <attr name="corner_bottom_start" />
+        <attr name="corner_bottom_end" />
+        <attr name="corner_top_start" />
+        <attr name="corner_top_end" />
+        <attr name="solid_color" />
+        <attr name="stroke_width" />
+        <attr name="stroke_color" />
+        <attr name="gradient_start_color" />
+        <attr name="gradient_center_color" />
+        <attr name="gradient_end_color" />
+        <attr name="gradient_type" />
+        <attr name="gradient_orientation" />
+        <attr name="gradient_center_x" />
+        <attr name="gradient_center_y" />
+        <attr name="gradient_radius" />
+        <attr name="gradient_use_level" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeTextView">
+        <attr name="corner_radius" />
+        <attr name="corner_bottom_start" />
+        <attr name="corner_bottom_end" />
+        <attr name="corner_top_start" />
+        <attr name="corner_top_end" />
+        <attr name="solid_color" />
+        <attr name="stroke_width" />
+        <attr name="stroke_color" />
+        <attr name="gradient_start_color" />
+        <attr name="gradient_center_color" />
+        <attr name="gradient_end_color" />
+        <attr name="gradient_type" />
+        <attr name="gradient_orientation" />
+        <attr name="gradient_center_x" />
+        <attr name="gradient_center_y" />
+        <attr name="gradient_radius" />
+        <attr name="gradient_use_level" />
+        <attr name="button_icon" format="reference" />
+        <attr name="icon_margin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeEditText">
+        <attr name="corner_radius" />
+        <attr name="corner_bottom_start" />
+        <attr name="corner_bottom_end" />
+        <attr name="corner_top_start" />
+        <attr name="corner_top_end" />
+        <attr name="solid_color" />
+        <attr name="stroke_width" />
+        <attr name="stroke_color" />
+        <attr name="gradient_start_color" />
+        <attr name="gradient_center_color" />
+        <attr name="gradient_end_color" />
+        <attr name="gradient_type" />
+        <attr name="gradient_orientation" />
+        <attr name="gradient_center_x" />
+        <attr name="gradient_center_y" />
+        <attr name="gradient_radius" />
+        <attr name="gradient_use_level" />
+    </declare-styleable>
 </resources>
