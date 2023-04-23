@@ -7,7 +7,7 @@ plugins {
 //group = 'com.github.GrenderG'
 
 android {
-    compileSdk = 33
+    compileSdk = libs.versions.targetSdk.get().toInt()
 
     defaultConfig {
         minSdk = 23
