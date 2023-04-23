@@ -1,4 +1,0 @@
-
-rootProject.name = "CollectsPkg"
-include ':app'
-include ':collects'
