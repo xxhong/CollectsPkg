@@ -1,7 +1,7 @@
 [versions]
 compileSdk = "31"
 targetSdk = "31"
-minSdk = "23"
+minSdk = "21"
 retrofit = "2.9.0"
 okhttp = "4.9.3"
 roomVersion = "2.4.2"

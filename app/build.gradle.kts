@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId = "es.dmoral.toastysample"
-        minSdk = 23
+        minSdk = 21
         targetSdk = 33
     }
 
@@ -26,4 +26,5 @@ dependencies {
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation(project(mapOf("path" to ":collects")))
+//    implementation("com.github.xxhong:CollectsPkg:1.1.5")
 }
