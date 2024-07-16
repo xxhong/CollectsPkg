@@ -1,13 +1,17 @@
 [versions]
 constraintlayout = "2.1.4"
+gson = "2.10.1"
 material = "1.12.0"
+materialVersion = "1.12.0"
 recyclerview = "1.3.2"
 [libraries]
 #official
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 androidx-recyclerview-v121 = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
 appcompat = "androidx.appcompat:appcompat:1.7.0"
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
+material-v1120 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 [bundles]
 
 [plugins]

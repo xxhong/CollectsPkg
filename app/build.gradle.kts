@@ -30,6 +30,8 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
+    implementation(project(":collects"))
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)

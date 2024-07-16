@@ -7,7 +7,7 @@ plugins {
 
 android {
     compileSdk = 34
-    namespace = "com.collect"
+    namespace = "com.particle.baseutils"
     defaultConfig {
         minSdk = 23
         targetSdk = 34
@@ -35,11 +35,12 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
     implementation(libs.appcompat)
     implementation(libs.androidx.recyclerview.v121)
+
+    implementation(libs.gson)
+    compileOnly(libs.material.v1120)
 }
 
 
-// Because the components are created only during the afterEvaluate phase, you must
-// configure your publications using the afterEvaluate() lifecycle method.
 afterEvaluate {
     publishing {
         publications {

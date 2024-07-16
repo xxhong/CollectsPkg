@@ -23,8 +23,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.particle.baseutils.R;
 
-import com.blankj.utilcode.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
