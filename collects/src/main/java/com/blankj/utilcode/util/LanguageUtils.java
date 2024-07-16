@@ -23,7 +23,7 @@ import androidx.annotation.Nullable;
  */
 public class LanguageUtils {
 
-    private static final String KEY_LOCALE          = "KEY_LOCALE";
+    private static final String KEY_LOCALE = "KEY_LOCALE";
     private static final String VALUE_FOLLOW_SYSTEM = "VALUE_FOLLOW_SYSTEM";
 
     private LanguageUtils() {
@@ -43,7 +43,7 @@ public class LanguageUtils {
      * @param isRelaunchApp True to relaunch app, false to recreate all activities.
      */
     public static void applySystemLanguage(final boolean isRelaunchApp) {
-        applyLanguageReal(null, isRelaunchApp);
+        applyLanguageReal(null, isRelaunchApp, false);
     }
 
     /**
@@ -52,7 +52,7 @@ public class LanguageUtils {
      * @param locale The language of locale.
      */
     public static void applyLanguage(@NonNull final Locale locale) {
-        applyLanguage(locale, false);
+        applyLanguage(locale, false, false);
     }
 
     /**
@@ -62,12 +62,12 @@ public class LanguageUtils {
      * @param isRelaunchApp True to relaunch app, false to recreate all activities.
      */
     public static void applyLanguage(@NonNull final Locale locale,
-                                     final boolean isRelaunchApp) {
-        applyLanguageReal(locale, isRelaunchApp);
+                                     final boolean isRelaunchApp, final boolean isInit) {
+        applyLanguageReal(locale, isRelaunchApp, isInit);
     }
 
     private static void applyLanguageReal(final Locale locale,
-                                          final boolean isRelaunchApp) {
+                                          final boolean isRelaunchApp, final boolean isInit) {
         if (locale == null) {
             UtilsBridge.getSpUtils4Utils().put(KEY_LOCALE, VALUE_FOLLOW_SYSTEM, true);
         } else {
@@ -79,7 +79,7 @@ public class LanguageUtils {
             @Override
             public void accept(Boolean success) {
                 if (success) {
-                    restart(isRelaunchApp);
+                    restart(isRelaunchApp, isInit);
                 } else {
                     // use relaunch app
                     UtilsBridge.relaunchApp();
@@ -88,13 +88,16 @@ public class LanguageUtils {
         });
     }
 
-    private static void restart(final boolean isRelaunchApp) {
+    private static void restart(final boolean isRelaunchApp, final boolean isInit) {
         if (isRelaunchApp) {
             UtilsBridge.relaunchApp();
         } else {
-            for (Activity activity : UtilsBridge.getActivityList()) {
-                activity.recreate();
+            if (!isInit) {
+                for (Activity activity : UtilsBridge.getActivityList()) {
+                    activity.recreate();
+                }
             }
+
         }
     }
 
