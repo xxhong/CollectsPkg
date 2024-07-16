@@ -1,17 +1,16 @@
 plugins {
     id("com.android.library")
-//    id("com.github.dcendents.android-maven")
     id("maven-publish")
+    kotlin("android")
+    kotlin("kapt")
 }
 
-//group = 'com.github.GrenderG'
-
 android {
-    compileSdk = libs.versions.targetSdk.get().toInt()
-
+    compileSdk = 34
+    namespace = "com.collect"
     defaultConfig {
-        minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
+        minSdk = 23
+        targetSdk = 34
     }
     buildTypes {
         release {
@@ -20,13 +19,22 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
+
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
     implementation(libs.appcompat)
-    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation(libs.androidx.recyclerview.v121)
 }
 
 
