@@ -29,7 +29,7 @@
 
         <provider
             android:name="network.blankj.utilcode.util.UtilsFileProvider"
-            android:authorities="${applicationId}.utilcode.fileprovider"
+            android:authorities="${applicationId}.network.utilcode.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
