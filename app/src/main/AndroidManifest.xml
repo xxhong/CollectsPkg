@@ -5,7 +5,7 @@
 
     <application>
         <activity
-            android:name="com.minijoy.collectspkg.MainActivity"
+            android:name="network.minijoy.collectspkg.MainActivity"
             android:theme="@style/Theme.AppCompat.DayNight"
             android:exported="true">
             <intent-filter>
